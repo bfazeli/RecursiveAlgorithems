@@ -34,12 +34,30 @@ using namespace std;
 void greetUser()
 {
 	// Display title
+	cout << "--------------------------------------------------------------------" << endl;
 	cout << "Welcome to Recursive Recursions!" << endl;
-
+	cout << "--------------------------------------------------------------------" << endl;
+	
 	// Display purpose
 	cout << "This program will first ask for a string and reverse it for you.\n"
 		<< "It\'ll then proceed to sum up the first n integers raised to a power.\n"
 		<< "Lastly, this program will find the GCD of two integers." << endl;
+	cout << "--------------------------------------------------------------------\n" << endl;
+}
+
+void displayMenu()
+{
+	cout << "--------------------------------------------------------------------" << endl;
+	cout << "1.\tReverse a string.\n"
+		<< "2.\tSum up the first n integers raised to a power.\n"
+		<< "3.\tFind the GCD of two integers.\n"
+		<< "4.\tQuit." << endl;
+	cout << "--------------------------------------------------------------------" << endl;
+}
+
+void reverseString(string &value)
+{
+
 }
 
 int main()
@@ -47,6 +65,14 @@ int main()
 	// Greet the user
 	greetUser();
 
+	// Get the user input for their menu choice
+	int menuChoice = 4;
+	do
+	{
+		displayMenu();
+		cin >> menuChoice;
+	} while (menuChoice != 4);
+	
 
 }
 
