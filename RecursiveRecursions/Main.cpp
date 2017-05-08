@@ -12,16 +12,16 @@ Lab 4
 OUTLINE
 
 1. Write a recursive function named reverseString. The function should take a string and
-return the reverse of the string. For instance, the call reverseString(‘‘apple’’) should
-return ‘‘elppa’’.
+return the reverse of the string. For instance, the call reverseString(â€˜â€˜appleâ€™â€™) should
+return â€˜â€˜elppaâ€™â€™.
 
 2. Write a recursive function named sumPowers that computes the sum of the first n integers
 raised to the specified power. The function should take two parameters - the power, and n.
 For example, the call sumPowers(4, 3) should return 98. The power is 4 and n = 3. Hence,
 1^4 + 2^4 + 3^4 = 98.
 
-3. Write a recursive function that implements Euclid’s algorithm. You can find more information
-about Euclid’s algorithm in the Integer Properties chapter of your book.
+3. Write a recursive function that implements Euclidâ€™s algorithm. You can find more information
+about Euclidâ€™s algorithm in the Integer Properties chapter of your book.
 
 4. Write a main function that asks for input for each of these functions to make testing the
 functions easier.
@@ -74,7 +74,14 @@ string reverseString(string &value)
 	return reverseString(value, size);
 }
 
-
+int sumPowers(int power, int n)
+{
+	if (n == 1)
+	{
+		return n;
+	}
+	return pow(n, power) + sumPowers(power, n - 1);
+}
 
 int main()
 {
@@ -98,14 +105,23 @@ int main()
 			cout << "\nReversed: " << reverseString(value) << endl;
 			break;
 		case 2:
+			cout << "Enter the power: ";
+			cin >> num1;
+			cout << "Enter the number of integers to sum up: ";
+			cin >> num2;
+			cout << "\nThe sum is: " << sumPowers(num1, num2) << endl;
 			break;
 		case 3:
+			cout << "Enter the first number: ";
+			cin >> num1;
+			cout << "Enter the second number: ";
+			cin >> num2;
 			break;
 		case 4:
 			menuChoice = 4;
 			break;
 		default:
-			cout << "\nError, incorrect value entered.\nPlease enter a value between 1 and 4.";
+			cout << "\nError, incorrect value entered.\nPlease enter a value between 1 and 4." << endl;
 			break;
 		}
 	} while (menuChoice != 4);
