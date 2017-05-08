@@ -1,3 +1,4 @@
 ﻿  Main.cpp
-  RecursiveRecursions.vcxproj -> \\Mac\Home\Desktop\Coding\OCC\DiscreteStructures\InClassLabs\RecursiveRecursions\Debug\RecursiveRecursions.exe
-  RecursiveRecursions.vcxproj -> \\Mac\Home\Desktop\Coding\OCC\DiscreteStructures\InClassLabs\RecursiveRecursions\Debug\RecursiveRecursions.pdb (Partial PDB)
+\\mac\home\desktop\coding\occ\discretestructures\recursivealgorithems\recursiverecursions\main.cpp(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  RecursiveRecursions.vcxproj -> \\Mac\Home\Desktop\Coding\OCC\DiscreteStructures\RecursiveAlgorithems\Debug\RecursiveRecursions.exe
+  RecursiveRecursions.vcxproj -> \\Mac\Home\Desktop\Coding\OCC\DiscreteStructures\RecursiveAlgorithems\Debug\RecursiveRecursions.pdb (Partial PDB)

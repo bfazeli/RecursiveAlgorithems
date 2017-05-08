@@ -83,13 +83,22 @@ int sumPowers(int power, int n)
 	return pow(n, power) + sumPowers(power, n - 1);
 }
 
+int gcd(int num1, int num2)
+{
+	if (num1 % num2 == 0)
+	{
+		return num2;
+	}
+	return gcd(num2, num1 % num2);
+}
+
 int main()
 {
 	// Greet the user
 	greetUser();
 
 	// Get the user input for their menu choice
-	int menuChoice = 4;
+	int menuChoice = 4, num1, num2;
 	string value;
 	do
 	{
@@ -116,6 +125,7 @@ int main()
 			cin >> num1;
 			cout << "Enter the second number: ";
 			cin >> num2;
+			cout << "\nThe GCD is " << gcd(num1, num2) << endl;
 			break;
 		case 4:
 			menuChoice = 4;
@@ -126,7 +136,8 @@ int main()
 		}
 	} while (menuChoice != 4);
 	
-
+	system("pause");
+	return 0;
 }
 
 
