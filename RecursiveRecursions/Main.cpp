@@ -28,6 +28,7 @@ functions easier.
 */
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -55,10 +56,25 @@ void displayMenu()
 	cout << "--------------------------------------------------------------------" << endl;
 }
 
-void reverseString(string &value)
+string reverseString(string &value, int size)
 {
-
+	if (size == 1)
+		return value;
+	--size;
+	return reverseString(value.substr(1, size), size) + value.at(0);
 }
+
+string reverseString(string &value)
+{
+	int size = value.length();
+	if (size == 0)
+	{
+		return "";
+	}
+	return reverseString(value, size);
+}
+
+
 
 int main()
 {
@@ -67,10 +83,31 @@ int main()
 
 	// Get the user input for their menu choice
 	int menuChoice = 4;
+	string value;
 	do
 	{
 		displayMenu();
+		cout << "Enter your choice: ";
 		cin >> menuChoice;
+		switch (menuChoice)
+		{
+		case 1:
+			cin.ignore();
+			cout << "Enter the string to reverse: ";
+			getline(cin, value);
+			cout << "\nReversed: " << reverseString(value) << endl;
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			menuChoice = 4;
+			break;
+		default:
+			cout << "\nError, incorrect value entered.\nPlease enter a value between 1 and 4.";
+			break;
+		}
 	} while (menuChoice != 4);
 	
 
